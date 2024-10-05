@@ -1,0 +1,12 @@
+def getpassword(number):
+        password = ""
+        for a in range(1,number):
+            for b in range(2,number):
+                if b <= a:
+                    continue
+                if number % (a+b) == 0:
+                    password += str(a) + str(b)
+        return password
+c = int(input("Nuber 3-20: "))
+result = getpassword(c)
+print(result)
